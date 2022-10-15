@@ -13,7 +13,7 @@ const main = async (workspace) => {
   console.log(`owner ${owner} repo ${repo} username ${username} prNumber ${prNumber} `);
 
   if(github.context.payload.pull_request && validActivityType(github.context.payload.action)) {
-    assignLabel(octokit, 'username', userTeamMap, owner, repo, prNumber);
+    assignLabel(octokit, username, userTeamMap, owner, repo, prNumber);
   } else {
     core.setFailed('This action should only be runned on a opened Pull Request');
   }
