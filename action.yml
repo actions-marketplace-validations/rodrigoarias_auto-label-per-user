@@ -7,7 +7,6 @@ inputs:
   user-team-map:
     description: 'A map of git users to labels'
     required: false
-    default: {}
 runs:
   using: 'node16'
   main: 'index.js'
