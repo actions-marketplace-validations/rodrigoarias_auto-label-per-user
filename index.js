@@ -5,8 +5,8 @@ const main = async (workspace) => {
   const myToken = core.getInput('git-token');
   const octokit = github.getOctokit(myToken);
   const userTeamMap = core.getInput('user-team-map');
-  const owner = context.payload.repository.owner.login
-  const repo = context.payload.repository.name
+  const owner = github.context.payload.repository.owner.login
+  const repo = github.context.payload.repository.name
   const username = github.event.pull_request.user.login;
   const prNumber = github.context.payload.number
   
