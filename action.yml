@@ -4,6 +4,9 @@ inputs:
   git-token:
     description: 'Token to add changelog file'
     required: true
+  default-label:
+    description: 'Default label'
+    required: false
   user-team-map:
     description: 'A map of git users to labels'
     required: false
