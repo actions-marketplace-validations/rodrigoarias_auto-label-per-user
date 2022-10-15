@@ -7,6 +7,9 @@ const main = async (workspace) => {
   const userTeamMap = core.getInput('user-team-map');
   const owner = github.context.payload.repository.owner.login
   const repo = github.context.payload.repository.name
+  
+  console.log(`github: ${JSON.stringify(github)}`);
+  
   const username = github.event.pull_request.user.login;
   const prNumber = github.context.payload.number
   
