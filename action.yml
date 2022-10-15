@@ -1,6 +1,9 @@
 name: 'Auto Label Per User'
 description: 'Assigns a label according the PR author'
 inputs:
+  git-token:
+    description: 'Token to add changelog file'
+    required: true
   user-team-map:
     description: 'A map of git users to labels'
     required: false
