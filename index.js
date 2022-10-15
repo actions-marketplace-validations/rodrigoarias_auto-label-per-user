@@ -8,14 +8,9 @@ const main = async (workspace) => {
   const repo = github.context.payload.repository.name;
   const username = github.context.payload.sender.login;
   const prNumber = github.context.payload.number;
-  
   const userTeamMapString = core.getInput('user-team-map');
-  console.log(`string ${userTeamMapString}`);
-  console.log(`var ${userTeamMapString["rodrigoarias"]}`);
   const userTeamMap = JSON.parse(userTeamMapString);
   
-  console.log(`owner ${owner} repo ${repo} username ${username} prNumber ${prNumber} `);
-
   if(github.context.payload.pull_request && validActivityType(github.context.payload.action)) {
     assignLabel(octokit, username, userTeamMap, owner, repo, prNumber);
   } else {
