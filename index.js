@@ -25,7 +25,7 @@ const validActivityType = (type) => {
 }
 
 
-const assignLabel = async (octokit, username, userTeamMap, owner, repo, prNumber) {
+const assignLabel = async (octokit, username, userTeamMap, owner, repo, prNumber) => {
   const team = userTeamMap[username];
 
   if (team) {
