@@ -11,6 +11,7 @@ const main = async (workspace) => {
   
   const userTeamMapString = core.getInput('user-team-map');
   console.log(`string ${userTeamMapString}`);
+  console.log(`var ${userTeamMapString["rodrigoarias"]}`);
   const userTeamMap = JSON.parse(userTeamMapString);
   
   console.log(`owner ${owner} repo ${repo} username ${username} prNumber ${prNumber} `);
