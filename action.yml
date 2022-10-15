@@ -1,0 +1,10 @@
+name: 'Auto Label Per User'
+description: 'Assigns a label according the PR author'
+inputs:
+  user-team-map:
+    description: 'A map of git users to labels'
+    required: false
+    default: {}
+runs:
+  using: 'node16'
+  main: 'index.js'

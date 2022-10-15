@@ -1,0 +1,24 @@
+{
+  "name": "auto-label-per-user",
+  "version": "1.0.0",
+  "description": "A node action for assigning a label to a PR according the author.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigoarias/auto-label-per-user.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigoarias/auto-label-per-user/issues"
+  },
+  "homepage": "https://github.com/rodrigoarias/auto-label-per-user#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}
