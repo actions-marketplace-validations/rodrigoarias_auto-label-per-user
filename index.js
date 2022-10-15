@@ -4,11 +4,14 @@ const github = require('@actions/github')
 const main = async (workspace) => {
   const myToken = core.getInput('git-token');
   const octokit = github.getOctokit(myToken);
-  const userTeamMap = core.getInput('user-team-map');
-  const owner = github.context.payload.repository.owner.login
-  const repo = github.context.payload.repository.name 
+  const owner = github.context.payload.repository.owner.login;
+  const repo = github.context.payload.repository.name;
   const username = github.context.payload.sender.login;
-  const prNumber = github.context.payload.number
+  const prNumber = github.context.payload.number;
+  
+  const userTeamMapString = core.getInput('user-team-map');
+  console.log(`string ${userTeamMapString}`);
+  const userTeamMap = JSON.parse(userTeamMapString);
   
   console.log(`owner ${owner} repo ${repo} username ${username} prNumber ${prNumber} `);
 
